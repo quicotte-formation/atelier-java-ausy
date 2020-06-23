@@ -7,11 +7,33 @@ import java.math.BigInteger;
 public class StructCtrlTest {
 
     // collections avec List, Set, Map
-    // expressions régulières
+    // expressions régu
+    // lières
 
 
 
     // Afficher les 20 premiers nombres premiers.
+    @Test
+    public void testPremiers(){
+
+        int i=1,k=0;
+        boolean valide;
+        do{
+            valide=true;
+            for(int j=2; j<i; j++){
+                if( i%j==0 ){
+                    valide=false;
+                    break;
+                }
+            }
+            if( valide ){
+                System.out.println(i);
+                k++;
+            }
+            i++;
+        }while( 20!=k );
+    }
+
 
     @Test
     public void testTernaire(){
