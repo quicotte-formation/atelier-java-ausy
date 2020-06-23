@@ -6,9 +6,59 @@ import java.math.BigInteger;
 
 public class StructCtrlTest {
 
-    // Programme pour demain: boucle while et do..while
     // collections avec List, Set, Map
     // expressions régulières
+
+
+
+    // Afficher les 20 premiers nombres premiers.
+
+    @Test
+    public void testTernaire(){
+        String var = 2<3 ? "Plus petit" : "Plus grand";
+
+        System.out.println( var );
+    }
+
+    @Test
+    public void doWhile(){
+
+        String[] couleursMin = new String[]{"rouge","jaune","vert"};
+        int i = 0;
+        do{
+            if( couleursMin[i]=="jaune" ){
+                i++;
+                continue;
+            }
+            System.out.println( couleursMin[i].toUpperCase() );
+
+            i++;
+
+
+        }while(i != couleursMin.length );
+    }
+
+    @Test
+    public void factorielleWhile(){
+        int i = 5;
+        int result = 1;
+        while(i>0){
+            result *= i; // Equivalient à result = result * i
+            i--;
+        }
+
+        System.out.println( result );
+    }
+
+    @Test
+    public void boucleWhile(){
+
+        int i = 10;
+        while( i<10 ){
+            System.out.println( i );
+            i++;
+        }
+    }
 
     @Test
     public void multiplicationMatriceParNombre(){
