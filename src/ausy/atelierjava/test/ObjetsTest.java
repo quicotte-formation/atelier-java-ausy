@@ -1,11 +1,23 @@
 package ausy.atelierjava.test;
 
+import ausy.atelierjava.horloge.Aiguille;
 import ausy.atelierjava.horloge.Horloge;
 import ausy.atelierjava.objets.animaux.Animal;
 import ausy.atelierjava.turtle.Turtle;
 import org.junit.jupiter.api.Test;
 
 public class ObjetsTest {
+
+    @Test
+    public void aiguilleOK(){
+        Turtle t = new Turtle();
+
+        Aiguille a1 = new Aiguille();
+        a1.setMax(99);
+        a1.setValeur(50);
+        a1.dessine(t);
+        while(true);
+    }
 
     @Test
     public  void horlogeTest(){
