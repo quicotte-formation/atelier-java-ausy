@@ -11,6 +11,7 @@ class VariablesTest {
 
     @Test
     public void testBigIntegerBigDecimal(){
+
         BigInteger bi1 = new BigInteger("123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890");
         BigInteger bi2 = new BigInteger("1");
         System.out.println( bi1.pow(100) );
