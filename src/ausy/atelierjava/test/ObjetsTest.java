@@ -11,13 +11,11 @@ public class ObjetsTest {
     public  void horlogeTest(){
 
         Horloge h1 = new Horloge();
-        h1.affiche();
-        h1.setHeures(14);
+        h1.setHeures(2);
         h1.setMinutes(51);
-        h1.affiche();
-        h1.avancerUneMinute();
-        h1.affiche();
-        System.out.println( h1.getHeures() );
+        h1.avancerUneSeconde();
+        h1.dessine( new Turtle() );
+        while (true);
     }
 
     @Test
