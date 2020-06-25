@@ -4,22 +4,13 @@ import ausy.atelierjava.turtle.Turtle;
 
 public class Aiguille {
 
-    private int valeur;
+    private int valeur;//=0 ; )
     private int max=59;
     private int longueur=100;
 
-    private void resetOrigine(Turtle bob){
-
-        bob.up();
-        bob.setPosition(0,0);
-        bob.setDirection(90);
-        bob.down();
-    }
-
     public void dessine(Turtle bob){
 
-        resetOrigine(bob);
-        bob.right( valeur % max * 360 / max );
+        bob.right( 360/(max+1)*valeur );
         bob.forward(longueur);
     }
 
