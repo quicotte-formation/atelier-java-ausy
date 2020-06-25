@@ -48,17 +48,5 @@ public class ObjetsTest {
         while (true);
     }
 
-    @Test
-    public void animalTest(){
-        Turtle t = new Turtle();
 
-        t.speed(1);
-        Animal a = new Animal();
-        Animal a2 = new Animal();
-        a.afficher(t);
-        a2.afficher(t);
-        while (true);
-
-
-    }
 }

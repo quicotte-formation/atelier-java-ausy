@@ -2,21 +2,25 @@ package ausy.atelierjava.objets.animaux;
 
 import ausy.atelierjava.turtle.Turtle;
 
-public class Animal {
+abstract public class Animal {
 
     protected int posX;
     protected int posY;
 
-    public void afficher(Turtle turtle){
-        // Par défaut, notre animal est un amibe
+    public void resetTurtle(Turtle turtle){
         turtle.up();
-        turtle.setPosition(posX,posY);
-        turtle.setDirection(0);
+        turtle.setPosition(posX, posY);
+        turtle.setDirection(270);
         turtle.down();
-
-        for(int i=0;i<36;i++){
-            turtle.forward(20);
-            turtle.left(10);
-        }
     }
+
+    public void setPosX(int posX) {
+        this.posX = posX;
+    }
+
+    public void setPosY(int posY) {
+        this.posY = posY;
+    }
+
+    abstract public void afficher(Turtle turtle);
 }

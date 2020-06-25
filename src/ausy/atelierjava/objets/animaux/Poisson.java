@@ -6,9 +6,7 @@ public class Poisson extends Animal{
 
     @Override
     public void afficher(Turtle turtle) {
-        turtle.up();
-        turtle.setPosition(posX,posY);
-        turtle.down();
+        resetTurtle(turtle);
 
         turtle.forward(100);
     }
