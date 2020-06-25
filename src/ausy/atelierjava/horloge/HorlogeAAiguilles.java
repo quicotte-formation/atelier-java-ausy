@@ -64,6 +64,14 @@ public class HorlogeAAiguilles {
 
     public void dessine(Turtle t){
         // Cadran
+        resetOrigine(t);
+        t.up();
+        t.setPosition(posX+100, posY);
+        t.down();
+        for(int i=0;i<360;i++){
+            t.forward(2);
+            t.left(1);
+        }
 
         // Aiguilles
         resetOrigine(t);
