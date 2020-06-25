@@ -4,8 +4,8 @@ import ausy.atelierjava.turtle.Turtle;
 
 public class Animal {
 
-    private int posX;
-    private int posY;
+    protected int posX;
+    protected int posY;
 
     public void afficher(Turtle turtle){
         // Par défaut, notre animal est un amibe
