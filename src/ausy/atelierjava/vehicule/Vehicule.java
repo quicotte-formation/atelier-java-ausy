@@ -14,7 +14,24 @@ abstract public class Vehicule {
     protected int y=0;
     protected int pas;
 
-    abstract public void avancer();
+    public void avancer() {
+        switch (this.direction){
+            case AVANT:
+                this.y += pas;
+                break;
+            case ARRIERE:
+                this.y -= pas;
+                break;
+            case GAUCHE:
+                this.x -= pas;
+                break;
+            case DROITE:
+                this.x += pas;
+                break;
+            default:
+                throw new RuntimeException("Cas non pris en charge");
+        }
+    }
 
     public void volantGauche(){
         this.direction = Direction.GAUCHE;
