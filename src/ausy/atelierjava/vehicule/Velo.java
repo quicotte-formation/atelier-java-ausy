@@ -2,23 +2,16 @@ package ausy.atelierjava.vehicule;
 
 public class Velo extends Vehicule{
 
+    public Velo() {
+        this.pas = 1;
+    }
+
     @Override
     public void avancer() {
-        switch (this.direction){
-            case AVANT:
-                this.y ++;
-                break;
-            case ARRIERE:
-                this.y --;
-                break;
-            case GAUCHE:
-                this.x--;
-                break;
-            case DROITE:
-                this.x++;
-                break;
-            default:
-                throw new RuntimeException("Cas non pris en charge");
+        if( this.direction == Direction.ARRIERE ){
+            return;
         }
+
+        super.avancer();
     }
 }

@@ -9,6 +9,15 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
 public class VehiculeTest {
+
+    @Test
+    public void veloMarcheArriereKO(){
+        Velo v = new Velo();
+        v.marcheArriere();
+        v.avancer();
+        v.afficherPosition();
+    }
+
     @Test
     public void test(){
 
